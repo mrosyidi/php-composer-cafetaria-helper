@@ -32,4 +32,12 @@
         var_dump($result);
     }
 
-    testCheckHelperFoodFound();
+    function testCheckHelperDrinkNotFound(): void 
+    {
+        $drinks[] = new Drink("Es Campur");
+        $drinks[] = new Drink("Es Oyen");
+        $result = \Cafetaria\Helper\CheckHelper::check($drinks, "Es Teh");
+        var_dump($result);
+    }
+
+    testCheckHelperDrinkNotFound();
