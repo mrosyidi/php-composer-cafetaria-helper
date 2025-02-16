@@ -24,4 +24,12 @@
         var_dump($result);
     }
 
-    testCheckHelperFoodNotFound();
+    function testCheckHelperFoodFound(): void 
+    {
+        $foods[] = new Food("Pastel");
+        $foods[] = new Food("Ayam Goreng");
+        $result = \Cafetaria\Helper\CheckHelper::check($foods, "Pastel");
+        var_dump($result);
+    }
+
+    testCheckHelperFoodFound();
