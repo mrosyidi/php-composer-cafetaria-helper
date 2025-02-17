@@ -56,4 +56,12 @@
         var_dump($code);
     }
 
-    testCodeHelperOrderGreaterThanPaymentSameCode();
+    function testCodeHelperOrderGreaterThanPaymentDifferentCode(): void 
+    {
+        $orders[] = new Order(2);
+        $payments[] = new Payment(1);
+        $code = \Cafetaria\Helper\CodeHelper::code($orders, $payments, true);
+        var_dump($code);
+    }
+
+    testCodeHelperOrderGreaterThanPaymentDifferentCode();
