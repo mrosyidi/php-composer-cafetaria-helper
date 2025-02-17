@@ -34,4 +34,13 @@
         var_dump($result);
     }
 
-    testRangeHelperOutOfRangePlus();
+    function testRangeHelperInRange(): void 
+    {
+        $drinks[] = new Drink("Es Oyen");
+        $drinks[] = new Drink("Es Campur");
+        $drinks[] = new Drink("Jus Wortel");
+        $result = \Cafetaria\Helper\RangeHelper::range($drinks, 1);
+        var_dump($result);
+    }
+
+    testRangeHelperInRange();
