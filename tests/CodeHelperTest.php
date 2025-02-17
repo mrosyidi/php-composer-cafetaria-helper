@@ -40,4 +40,12 @@
         var_dump($code);
     }
 
-    testCodeHelperDifferentCode();
+    function testCodeHelperPaymentNotEmpty(): void 
+    {
+        $orders = [];
+        $payments[] = new Order(1);
+        $code = \Cafetaria\Helper\CodeHelper::code($orders, $payments, true);
+        var_dump($code);
+    }
+
+    testCodeHelperPaymentNotEmpty();
