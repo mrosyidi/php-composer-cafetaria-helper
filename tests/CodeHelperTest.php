@@ -32,4 +32,12 @@
         var_dump($code);
     }
 
-    testCodeHelperSameCode();
+    function testCodeHelperDifferentCode(): void 
+    {
+        $orders[] = new Order(1);
+        $payments = [];
+        $code = \Cafetaria\Helper\CodeHelper::code($orders, $payments, true);
+        var_dump($code);
+    }
+
+    testCodeHelperDifferentCode();
