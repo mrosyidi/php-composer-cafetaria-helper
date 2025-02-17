@@ -24,4 +24,12 @@
         var_dump($code);
     }
 
-    testCodeHelperEmpty();
+    function testCodeHelperSameCode(): void 
+    {
+        $orders[] = new Order(1);
+        $payments = [];
+        $code = \Cafetaria\Helper\CodeHelper::code($orders, $payments, false);
+        var_dump($code);
+    }
+
+    testCodeHelperSameCode();
