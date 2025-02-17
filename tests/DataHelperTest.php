@@ -41,4 +41,13 @@
         var_dump($data);
     }
 
-    testDataHelperFood();
+    function testDataHelperDrink(): void 
+    {
+        $drinks[] = new Drink("Es Oyen", 12000);
+        $drinks[] = new Drink("Es Campur", 12000);
+        $drinks[] = new Drink("Jus Wortel", 6000);
+        $data = \Cafetaria\Helper\DataHelper::data($drinks, 2);
+        var_dump($data);
+    }
+
+    testDataHelperDrink();
