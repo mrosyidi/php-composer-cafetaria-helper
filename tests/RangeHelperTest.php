@@ -25,4 +25,13 @@
         var_dump($result);
     }
 
-    testRangeHelperOutOfRangeMinus();
+    function testRangeHelperOutOfRangePlus(): void 
+    {
+        $foods[] = new Food("Pastel");
+        $foods[] = new Food("Donat");
+        $foods[] = new Food("Gado-Gado");
+        $result = \Cafetaria\Helper\RangeHelper::range($foods, 5);
+        var_dump($result);
+    }
+
+    testRangeHelperOutOfRangePlus();
