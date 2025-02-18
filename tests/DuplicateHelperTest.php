@@ -16,4 +16,13 @@
         var_dump($elements);
     }
 
-    testDuplicateHelperDataNotExist();
+    function testDuplicateHelperDataExist(): void 
+    {
+        $orders[] = new Order(1);
+        $orders[] = new Order(1);
+        $orders[] = new Order(2);
+        $elements = \Cafetaria\Helper\DuplicateHelper::duplicate($orders, 1);
+        var_dump($elements);
+    }
+
+    testDuplicateHelperDataExist();
