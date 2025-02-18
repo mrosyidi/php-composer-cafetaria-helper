@@ -16,4 +16,13 @@
         var_dump($result);
     }
 
-    testFindHelperNotFound();
+    function testFindHelperFound(): void 
+    {
+        $orders[] = new Order(1);
+        $orders[] = new Order(2);
+        $orders[] = new Order(3);
+        $result = \Cafetaria\Helper\FindHelper::find($orders, 2);
+        var_dump($result);
+    }
+
+    testFindHelperFound();
