@@ -24,4 +24,13 @@
         var_dump($total);
     }
 
-    testPayHelperDataNotExist();
+    function testPayHelperDataExist(): void 
+    {
+        $orders[] = new Order(1, 45000);
+        $orders[] = new Order(2, 12000);
+        $orders[] = new Order(2, 20000);
+        $total = \Cafetaria\Helper\PayHelper::pay($orders, 2);
+        var_dump($total);
+    }
+
+    testPayHelperDataExist();
